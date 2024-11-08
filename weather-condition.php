@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-        Team Itik - Embedded System
+        Weather Condition - Embedded System
     </title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" href="favicon.ico">
@@ -66,8 +66,7 @@
                             <!-- Menu Item Dashboard -->
                             <li>
                                 <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                                    href="/"
-                                    class="bg-graydark dark:bg-meta-4">
+                                    href="/" class="bg-graydark dark:bg-meta-4">
                                     <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -97,15 +96,23 @@
                             <!-- Menu Item Calendar -->
                             <li>
                                 <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                                    href="weather-condition.php" @click="selected = (selected === 'Calendar' ? '':'Calendar')"
+                                    href="weather-condition.php"
+                                    @click="selected = (selected === 'Calendar' ? '':'Calendar')"
                                     :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Calendar') && (page === 'calendar') }">
-                                    <svg height="22" width="22" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="fill-current">
+                                    <svg height="22" width="22" version="1.1" id="_x32_"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 512 512" xml:space="preserve" class="fill-current">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
                                         <g id="SVGRepo_iconCarrier">
                                             <g>
-                                                <path class="fill-current" d="M56.817,269.848c4.751-4.862,9.896-9.326,15.386-13.358c-16.274-16.173-26.351-38.56-26.351-63.314 c0-49.296,39.967-89.268,89.268-89.268c33.818,0,63.229,18.802,78.379,46.523c11.717-7.997,24.606-14.372,38.348-18.852 l0.664-1.834c0.49-1.37,0.355-2.875-0.372-4.135c-0.723-1.251-1.965-2.122-3.39-2.384l-33.652-6.036 c-2.025-0.372-3.61-1.953-3.978-3.982l-6.04-33.656c-0.258-1.42-1.124-2.672-2.38-3.39c-1.256-0.727-2.765-0.862-4.13-0.372 l-32.177,11.566c-1.932,0.694-4.096,0.118-5.423-1.454l-22.091-26.09c-0.934-1.116-2.312-1.75-3.758-1.75 c-1.446,0-2.819,0.634-3.754,1.75l-22.095,26.09c-1.327,1.573-3.488,2.148-5.419,1.463L71.679,75.798 c-1.365-0.49-2.874-0.355-4.13,0.364c-1.255,0.727-2.126,1.97-2.384,3.39l-6.044,33.656c-0.364,2.029-1.949,3.61-3.974,3.982 l-33.652,6.028c-1.424,0.27-2.667,1.132-3.394,2.384c-0.723,1.26-0.858,2.764-0.368,4.134l11.566,32.177 c0.689,1.936,0.114,4.1-1.454,5.427L1.746,189.423C0.638,190.361,0,191.74,0,193.177c0,1.454,0.638,2.824,1.746,3.762l26.098,22.09 c1.568,1.328,2.143,3.492,1.45,5.428l-11.562,32.168c-0.49,1.37-0.355,2.874,0.368,4.134c0.727,1.251,1.97,2.114,3.394,2.384 l33.652,6.036C55.755,269.29,56.305,269.535,56.817,269.848z"></path>
-                                                <path class="fill-current" d="M425.175,280.314c-0.034,0-0.068,0.009-0.101,0.009c0.05-1.446,0.101-2.892,0.101-4.345 c0-69.528-56.356-125.883-125.874-125.883c-65.114,0-118.698,49.456-125.207,112.864c-9.13-2.824-18.827-4.346-28.884-4.346 c-53.937,0-97.662,43.725-97.662,97.664c0,53.937,43.725,97.662,97.662,97.662h279.966c47.953,0,86.825-38.863,86.825-86.807 C512,319.178,473.128,280.314,425.175,280.314z"></path>
+                                                <path class="fill-current"
+                                                    d="M56.817,269.848c4.751-4.862,9.896-9.326,15.386-13.358c-16.274-16.173-26.351-38.56-26.351-63.314 c0-49.296,39.967-89.268,89.268-89.268c33.818,0,63.229,18.802,78.379,46.523c11.717-7.997,24.606-14.372,38.348-18.852 l0.664-1.834c0.49-1.37,0.355-2.875-0.372-4.135c-0.723-1.251-1.965-2.122-3.39-2.384l-33.652-6.036 c-2.025-0.372-3.61-1.953-3.978-3.982l-6.04-33.656c-0.258-1.42-1.124-2.672-2.38-3.39c-1.256-0.727-2.765-0.862-4.13-0.372 l-32.177,11.566c-1.932,0.694-4.096,0.118-5.423-1.454l-22.091-26.09c-0.934-1.116-2.312-1.75-3.758-1.75 c-1.446,0-2.819,0.634-3.754,1.75l-22.095,26.09c-1.327,1.573-3.488,2.148-5.419,1.463L71.679,75.798 c-1.365-0.49-2.874-0.355-4.13,0.364c-1.255,0.727-2.126,1.97-2.384,3.39l-6.044,33.656c-0.364,2.029-1.949,3.61-3.974,3.982 l-33.652,6.028c-1.424,0.27-2.667,1.132-3.394,2.384c-0.723,1.26-0.858,2.764-0.368,4.134l11.566,32.177 c0.689,1.936,0.114,4.1-1.454,5.427L1.746,189.423C0.638,190.361,0,191.74,0,193.177c0,1.454,0.638,2.824,1.746,3.762l26.098,22.09 c1.568,1.328,2.143,3.492,1.45,5.428l-11.562,32.168c-0.49,1.37-0.355,2.874,0.368,4.134c0.727,1.251,1.97,2.114,3.394,2.384 l33.652,6.036C55.755,269.29,56.305,269.535,56.817,269.848z">
+                                                </path>
+                                                <path class="fill-current"
+                                                    d="M425.175,280.314c-0.034,0-0.068,0.009-0.101,0.009c0.05-1.446,0.101-2.892,0.101-4.345 c0-69.528-56.356-125.883-125.874-125.883c-65.114,0-118.698,49.456-125.207,112.864c-9.13-2.824-18.827-4.346-28.884-4.346 c-53.937,0-97.662,43.725-97.662,97.664c0,53.937,43.725,97.662,97.662,97.662h279.966c47.953,0,86.825-38.863,86.825-86.807 C512,319.178,473.128,280.314,425.175,280.314z">
+                                                </path>
                                             </g>
                                         </g>
                                     </svg>
@@ -118,14 +125,19 @@
                             <!-- Menu Item Profile -->
                             <li>
                                 <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
-                                    href="geolocation-map.php" @click="selected = (selected === 'Profile' ? '':'Profile')"
+                                    href="geolocation-map.php"
+                                    @click="selected = (selected === 'Profile' ? '':'Profile')"
                                     :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Profile') && (page === 'profile') }"
                                     :class="page === 'profile' && 'bg-graydark'">
-                                    <svg width="22" height="22" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                                    <svg width="22" height="22" viewBox="0 0 32 32" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" class="fill-current">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
                                         <g id="SVGRepo_iconCarrier">
-                                            <path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path>
+                                            <path
+                                                d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z">
+                                            </path>
                                         </g>
                                     </svg>
 
@@ -138,11 +150,14 @@
                             <li>
                                 <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                                     href="led.php" class="bg-graydark dark:bg-meta-4">
-                                    <svg width="22px" height="22px" viewBox="0 0 16 16" class="fill-current" xmlns="http://www.w3.org/2000/svg" stroke-width="0.00016">
+                                    <svg width="22px" height="22px" viewBox="0 0 16 16" class="fill-current"
+                                        xmlns="http://www.w3.org/2000/svg" stroke-width="0.00016">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
                                         <g id="SVGRepo_iconCarrier">
-                                            <path d="M6 14C2.68629 14 0 11.3137 0 8C0 4.68629 2.68629 2 6 2H9V14H6Z" class="fill-current"></path>
+                                            <path d="M6 14C2.68629 14 0 11.3137 0 8C0 4.68629 2.68629 2 6 2H9V14H6Z"
+                                                class="fill-current"></path>
                                             <path d="M11 4H16V2H11V4Z" class="fill-current"></path>
                                             <path d="M11 9H16V7H11V9Z" class="fill-current"></path>
                                             <path d="M11 14H16V12H11V14Z" class="fill-current"></path>
@@ -676,127 +691,6 @@
             <main>
                 <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
-                        <!-- Card Item Start Temperature -->
-                        <div
-                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                            <div
-                                class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
-
-                                <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M15 6V5C15 3.34315 13.6569 2 12 2C10.3431 2 9 3.34315 9 5V11.3477C9 11.6857 8.82505 11.9957 8.56141 12.2072C7.30465 13.2152 6.5 14.7636 6.5 16.5C6.5 19.5376 8.96243 22 12 22C15.0376 22 17.5 19.5376 17.5 16.5C17.5 14.7636 16.6954 13.2152 15.4386 12.2072C15.1749 11.9957 15 11.6857 15 11.3477V10"
-                                            stroke="#3C50E0" stroke-width="2" stroke-linecap="round"></path>
-                                        <path
-                                            d="M14.4998 16.5C14.4998 17.8807 13.3805 19 11.9998 19C10.619 19 9.49976 17.8807 9.49976 16.5C9.49976 15.1193 10.619 14 11.9998 14C13.3805 14 14.4998 15.1193 14.4998 16.5Z"
-                                            stroke="#3C50E0" stroke-width="0.36"></path>
-                                        <path d="M12 14V12M12 5V8" stroke="#3C50E0" stroke-width="2"
-                                            stroke-linecap="round"></path>
-                                    </g>
-                                </svg>
-                            </div>
-
-
-                            <div class="mt-4 flex items-end justify-between">
-                                <div>
-                                    <h2 id="temperature" class="text-title-md font-bold text-black dark:text-white">
-                                        Loading ...
-                                    </h2>
-                                    <h2 id="temperature-fahrenheit"
-                                        class="text-title-md font-bold text-black dark:text-white"
-                                        style="display: none;">
-                                        Loading...</h2>
-                                    <span class="text-sm font-medium">Temperature</span>
-                                    <select id="unit-select"
-                                        class="text-md p-2 border border-gray-300 rounded w-full dark:bg-meta-4">
-                                        <option value="celsius">Celsius</option>
-                                        <option value="fahrenheit">Fahrenheit</option>
-                                    </select>
-                                </div>
-
-                                <span class="flex items-center gap-1 text-sm font-medium text-meta-3">
-                                    <div class="flex mx-auto items-center justify-center gap-4">
-
-                                        <span id="buzzer">
-                                            <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
-                                                xml:space="preserve">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                    stroke-linejoin="round"></g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <g>
-                                                        <path
-                                                            d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3 C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2 C28.4,24.6,27.6,25,26.8,25z">
-                                                        </path>
-                                                    </g>
-                                                    <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <!-- Card Item End -->
-
-                        <!-- Card Item Start Humidity -->
-                        <div
-                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                            <div
-                                class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
-                                <!-- <svg class="fill-primary dark:fill-white" width="20" height="22" viewBox="0 0 20 22"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.7531 16.4312C10.3781 16.4312 9.27808 17.5312 9.27808 18.9062C9.27808 20.2812 10.3781 21.3812 11.7531 21.3812C13.1281 21.3812 14.2281 20.2812 14.2281 18.9062C14.2281 17.5656 13.0937 16.4312 11.7531 16.4312ZM11.7531 19.8687C11.2375 19.8687 10.825 19.4562 10.825 18.9406C10.825 18.425 11.2375 18.0125 11.7531 18.0125C12.2687 18.0125 12.6812 18.425 12.6812 18.9406C12.6812 19.4219 12.2343 19.8687 11.7531 19.8687Z"
-                                        fill="" />
-                                    <path
-                                        d="M5.22183 16.4312C3.84683 16.4312 2.74683 17.5312 2.74683 18.9062C2.74683 20.2812 3.84683 21.3812 5.22183 21.3812C6.59683 21.3812 7.69683 20.2812 7.69683 18.9062C7.69683 17.5656 6.56245 16.4312 5.22183 16.4312ZM5.22183 19.8687C4.7062 19.8687 4.2937 19.4562 4.2937 18.9406C4.2937 18.425 4.7062 18.0125 5.22183 18.0125C5.73745 18.0125 6.14995 18.425 6.14995 18.9406C6.14995 19.4219 5.73745 19.8687 5.22183 19.8687Z"
-                                        fill="" />
-                                    <path
-                                        d="M19.0062 0.618744H17.15C16.325 0.618744 15.6031 1.23749 15.5 2.06249L14.95 6.01562H1.37185C1.0281 6.01562 0.684353 6.18749 0.443728 6.46249C0.237478 6.73749 0.134353 7.11562 0.237478 7.45937C0.237478 7.49374 0.237478 7.49374 0.237478 7.52812L2.36873 13.9562C2.50623 14.4375 2.9531 14.7812 3.46873 14.7812H12.9562C14.2281 14.7812 15.3281 13.8187 15.5 12.5469L16.9437 2.26874C16.9437 2.19999 17.0125 2.16562 17.0812 2.16562H18.9375C19.35 2.16562 19.7281 1.82187 19.7281 1.37499C19.7281 0.928119 19.4187 0.618744 19.0062 0.618744ZM14.0219 12.3062C13.9531 12.8219 13.5062 13.2 12.9906 13.2H3.7781L1.92185 7.56249H14.7094L14.0219 12.3062Z"
-                                        fill="" />
-                                </svg> -->
-
-                                <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" stroke="#000000"
-                                    stroke-width="0.00024000000000000003">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke="#CCCCCC" stroke-width="0.144"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path
-                                            d="M15.0066 3.25608C16.8483 2.85737 19.1331 2.8773 22.2423 3.65268C22.7781 3.78629 23.1038 4.32791 22.9699 4.86241C22.836 5.39691 22.2931 5.7219 21.7573 5.58829C18.8666 4.86742 16.9015 4.88747 15.4308 5.20587C13.9555 5.52524 12.895 6.15867 11.7715 6.84363L11.6874 6.89494C10.6044 7.55565 9.40515 8.28729 7.82073 8.55069C6.17734 8.82388 4.23602 8.58235 1.62883 7.54187C1.11607 7.33724 0.866674 6.75667 1.0718 6.24513C1.27692 5.73359 1.85889 5.48479 2.37165 5.68943C4.76435 6.6443 6.32295 6.77699 7.492 6.58265C8.67888 6.38535 9.58373 5.83916 10.7286 5.14119C11.855 4.45445 13.1694 3.6538 15.0066 3.25608Z"
-                                            fill="#3C50E0"></path>
-                                        <path
-                                            d="M22.2423 7.64302C19.1331 6.86765 16.8483 6.84772 15.0066 7.24642C13.1694 7.64415 11.855 8.44479 10.7286 9.13153C9.58373 9.8295 8.67888 10.3757 7.492 10.573C6.32295 10.7673 4.76435 10.6346 2.37165 9.67977C1.85889 9.47514 1.27692 9.72393 1.0718 10.2355C0.866674 10.747 1.11607 11.3276 1.62883 11.5322C4.23602 12.5727 6.17734 12.8142 7.82073 12.541C9.40515 12.2776 10.6044 11.546 11.6874 10.8853L11.7715 10.834C12.895 10.149 13.9555 9.51558 15.4308 9.19621C16.9015 8.87781 18.8666 8.85777 21.7573 9.57863C22.2931 9.71224 22.836 9.38726 22.9699 8.85275C23.1038 8.31825 22.7781 7.77663 22.2423 7.64302Z"
-                                            fill="#3C50E0"></path>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M18.9998 10.0266C18.6526 10.0266 18.3633 10.2059 18.1614 10.4772C18.0905 10.573 17.9266 10.7972 17.7089 11.111C17.4193 11.5283 17.0317 12.1082 16.6424 12.7555C16.255 13.3996 15.8553 14.128 15.5495 14.8397C15.2567 15.5213 14.9989 16.2614 14.9999 17.0117C15.0006 17.2223 15.0258 17.4339 15.0604 17.6412C15.1182 17.9872 15.2356 18.4636 15.4804 18.9521C15.7272 19.4446 16.1131 19.9674 16.7107 20.3648C17.3146 20.7664 18.0748 21 18.9998 21C19.9248 21 20.685 20.7664 21.2888 20.3648C21.8864 19.9674 22.2724 19.4446 22.5192 18.9522C22.764 18.4636 22.8815 17.9872 22.9393 17.6413C22.974 17.4337 22.9995 17.2215 22.9998 17.0107C23.0001 16.2604 22.743 15.5214 22.4501 14.8397C22.1444 14.128 21.7447 13.3996 21.3573 12.7555C20.968 12.1082 20.5803 11.5283 20.2907 11.111C20.073 10.7972 19.909 10.573 19.8382 10.4772C19.6363 10.2059 19.3469 10.0266 18.9998 10.0266ZM20.6119 15.6257C20.3552 15.0281 20.0049 14.3848 19.6423 13.782C19.4218 13.4154 19.2007 13.0702 18.9998 12.7674C18.7989 13.0702 18.5778 13.4154 18.3573 13.782C17.9948 14.3848 17.6445 15.0281 17.3878 15.6257L17.3732 15.6595C17.1965 16.0704 16.9877 16.5562 17.0001 17.0101C17.0121 17.3691 17.1088 17.7397 17.2693 18.0599C17.3974 18.3157 17.574 18.5411 17.8201 18.7048C18.06 18.8643 18.4248 19.0048 18.9998 19.0048C19.5748 19.0048 19.9396 18.8643 20.1795 18.7048C20.4256 18.5411 20.6022 18.3156 20.7304 18.0599C20.8909 17.7397 20.9876 17.3691 20.9996 17.01C21.0121 16.5563 20.8032 16.0705 20.6265 15.6597L20.6119 15.6257Z"
-                                            fill="#3C50E0"></path>
-                                        <path
-                                            d="M14.1296 11.5308C14.8899 11.2847 15.4728 12.076 15.1153 12.7892C14.952 13.1151 14.7683 13.3924 14.4031 13.5214C13.426 13.8666 12.6166 14.3527 11.7715 14.8679L11.6874 14.9192C10.6044 15.5799 9.40516 16.3115 7.82074 16.5749C6.17735 16.8481 4.23604 16.6066 1.62884 15.5661C1.11608 15.3615 0.866688 14.7809 1.07181 14.2694C1.27694 13.7578 1.8589 13.509 2.37167 13.7137C4.76436 14.6685 6.32297 14.8012 7.49201 14.6069C8.67889 14.4096 9.58374 13.8634 10.7286 13.1654C11.8166 12.5021 12.9363 11.9171 14.1296 11.5308Z"
-                                            fill="#3C50E0"></path>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <div class="mt-4 flex items-end justify-between">
-                                <div>
-                                    <h4 id="humidity" class="text-title-md font-bold text-black dark:text-white">
-                                        Loading ...
-                                    </h4>
-                                    <span class="text-sm font-medium">Humidity</span>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- Card Item End -->
-
                         <!-- Card Item Start -->
                         <div
                             class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
@@ -815,36 +709,15 @@
 
                             <div class="mt-4 items-end justify-between">
                                 <div>
-                                    <h4 id="distance" class="text-title-md font-bold text-black dark:text-white">
-                                        Loading ...
+                                    <h4 id="temperature" class="text-title-md font-bold text-black dark:text-white">
+                                        <span>Temperature: 0 °C</span>
                                     </h4>
-                                    <span class="text-sm font-medium">Distance Sensor 1</span>
+                                    <span class="text-sm font-medium">Temperature</span>
                                 </div>
 
                                 <span class="items-center gap-20 text-sm font-medium text-meta-3 flex">
-                                    <select id="distance-unit-select" class="p-2 border rounded-md">
-                                        <option value="cm">Centimeters (cm)</option>
-                                        <option value="mm">Millimeters (mm)</option>
-                                        <option value="m">Meters (m)</option>
-                                        <option value="km">Kilometers (km)</option>
-                                    </select>
 
-                                    <span id="distancebuzzer">
-                                        <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
-                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            viewBox="0 0 32 32" xml:space="preserve">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <g>
-                                                    <path
-                                                        d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3 C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2 C28.4,24.6,27.6,25,26.8,25z">
-                                                    </path>
-                                                </g>
-                                                <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
-                                            </g>
-                                        </svg>
-                                    </span>
+
                                 </span>
                             </div>
                         </div>
@@ -871,482 +744,98 @@
 
                             <div class="mt-4 items-end justify-between">
                                 <div>
-                                    <h4 id="distance1" class="text-title-md font-bold text-black dark:text-white">
-                                        Loading ...
+                                    <h4 id="humidity" class="text-title-md font-bold text-black dark:text-white">
+                                        <span>Humidity: 0%</span>
                                     </h4>
-                                    <span class="text-sm font-medium">Distance Sensor 2</span>
+                                    <span class="text-sm font-medium">Humidity</span>
                                 </div>
 
                                 <span class="items-center gap-20 text-sm font-medium text-meta-3 flex">
-                                    <select id="distance-unit-select1" class="p-2 border rounded-md">
-                                        <option value="cm">Centimeters (cm)</option>
-                                        <option value="mm">Millimeters (mm)</option>
-                                        <option value="m">Meters (m)</option>
-                                        <option value="km">Kilometers (km)</option>
-                                    </select>
 
-                                    <span id="distancebuzzer1">
-                                        <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
-                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            viewBox="0 0 32 32" xml:space="preserve">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier">
-                                                <g>
-                                                    <path
-                                                        d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3 C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2 C28.4,24.6,27.6,25,26.8,25z">
-                                                    </path>
-                                                </g>
-                                                <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
-                                            </g>
-                                        </svg>
-                                    </span>
                                 </span>
                             </div>
+                        </div>
+                        <!-- Card Item End -->
+
+                        <!-- Card Item Start -->
+                        <div
+                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            <div id="weather-icon">
+                                <img id="icon" src="/assets/icons/sunny-svgrepo-com.svg" alt="Weather Icon" width="100"
+                                    height="100">
+                                <span id="weather-text">Sunny</span> <!-- Span for displaying weather condition -->
+                            </div>
+                        </div>
+                        <!-- Card Item End -->
+
+                        <!-- Card Item Start -->
+                        <div
+                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            <span id="act5buzzer" style="display: inline-block; text-align: center;">
+                                <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 32 32" xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <path
+                                                d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2C28.4,24.6,27.6,25,26.8,25z">
+                                            </path>
+                                        </g>
+                                        <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
+                                    </g>
+                                </svg>
+                                <span class="text-sm font-medium">Buzzer</span>
+                            </span>
+                         
                         </div>
                         <!-- Card Item End -->
                     </div>
                     <br>
                     <!-- Place CARD for Chart here Distance Chart  ... -->
-                    <div class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <h2 class="text-title-md font-bold text-black dark:text-white text-center">Temperaure and Humidity</h2>
+                    <div class="flex gap-2">
+                        <div
+                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            <h2 class="text-title-md font-bold text-black dark:text-white text-center">Sound Chart</h2>
+                            <br>
+                            <canvas id="soundChart" width="660" height="400"
+                                class="mx-auto flex items-center justify-center"></canvas>
+                        </div>
+
                         <br>
-                        <canvas id="myChart" width="1000" height="500" class="mx-auto flex items-center justify-center"></canvas>
+
+                        <div
+                            class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                            <h2 class="text-title-md font-bold text-black dark:text-white text-center">Rain Chart</h2>
+
+                            <br>
+                            <canvas id="rainChart" width="660" height="400"
+                                class="mx-auto flex items-center justify-center"></canvas>
+                        </div>
                     </div>
 
                     <br>
 
-                    <div class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                        <h2 class="text-title-md font-bold text-black dark:text-white text-center">Distance Chart</h2>
-
+                    <div
+                        class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                        <h2 class="text-title-md font-bold text-black dark:text-white text-center">Historical Data</h2>
                         <br>
-                        <canvas id="combinedChart" width="1000" height="500" class="mx-auto flex items-center justify-center"></canvas>
-
+                        <table class="min-w-full border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 p-2 text-center">Index</th>
+                                    <th class="border border-gray-300 p-2 text-center">Latitude</th>
+                                    <th class="border border-gray-300 p-2 text-center">Longitude</th>
+                                    <th class="border border-gray-300 p-2 text-center">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sensorDataBody">
+                                <!-- Data will be populated here by JavaScript -->
+                            </tbody>
+                        </table>
                     </div>
                     <!-- end chart -->
-
-                    <div class="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
-                        <!-- ====== Chart One Start -->
-                        <div
-                            class="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
-                            <div class="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap">
-                                <div class="flex w-full flex-wrap gap-3 sm:gap-5 items-center justify-center">
-                                    <div class="flex min-w-47.5">
-                                        <span
-                                            class="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-red-500">
-                                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-red-500"></span>
-                                        </span>
-                                        <div class="w-full">
-                                            <p class="font-semibold text-red-500">Total Gas</p>
-
-                                        </div>
-                                    </div>
-                                    <div class="flex min-w-47.5">
-                                        <span
-                                            class="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-secondary">
-                                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
-                                        </span>
-                                        <div class="w-full">
-                                            <p class="font-semibold text-secondary">Total Vibration</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <canvas id="act4Chart" width="900" height="500" class="mx-auto flex items-center justify-center"></canvas>
-
-                            </div>
-                        </div>
-
-                        <!-- ====== Chart One End -->
-
-                        <!-- ====== Chart Two Start -->
-                        <div
-                            class="col-span-12 rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
-                            <div class="mb-4 justify-between gap-4">
-                                <div>
-                                    <h4 class="text-xl font-bold text-black dark:text-white">
-                                        Historical Data of Gas and Vibration
-                                    </h4>
-                                </div>
-                                <table class="mt-4 w-full">
-                                    <thead>
-                                        <tr class="bg-gray-100">
-                                            <th class="border border-gray-300 p-2">Entry</th>
-                                            <th class="border border-gray-300 p-2">Gas</th>
-                                            <th class="border border-gray-300 p-2">Vibration</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="sensorDataBody">
-                                        <!-- Data rows will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div>
-                                <div id="chartTwo" class="-mb-9 -ml-5"></div>
-                            </div>
-                        </div>
-
-                        <!-- ====== Chart Two End -->
-
-                        <!-- ====== Chart Three Start -->
-                        <div
-                            class="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
-                            <div class="mb-3 justify-between gap-4 sm:flex">
-                                <div>
-                                    <h4 class="text-xl font-bold text-black dark:text-white">
-                                        Visitors Analytics
-                                    </h4>
-                                </div>
-                                <div>
-                                    <div class="relative z-20 inline-block">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-2">
-                                <img src="/python/image/motion_capture.jpg" alt="Motion Capture" style="max-width: 100%; height: auto; margin-top: 10px; padding-bottom: 40px;" onerror="this.onerror=null; this.src='/path/to/default/image.jpg';">
-                                <h4 class="text-xl font-bold text-black dark:text-white">Live Camera Feed</h3>
-                                    <img src="http://192.168.0.105:8080/?action=stream" alt="Live Stream" style="max-width: 100%; height: auto; margin-top: 10px; padding-bottom: 40px;" onerror="this.onerror=null; this.src='assets/liveplaceholder.png';">
-                            </div>
-
-                        </div>
-
-                        <!-- ====== Chart Three End -->
-
-                        <!-- ====== Map One Start -->
-                        <div
-                            class="col-span-12 rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-7">
-
-                            <div class="flex justify-center items-center gap-10">
-                                <h4 class="mb-2 text-xl font-bold text-black dark:text-white">
-                                    PIR Motion Sensor Chart
-                                </h4>
-                                <span id="pirbuzzer">
-                                    <svg fill="#f8e45c" height="50px" width="50px" version="1.1" id="Icons"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        viewBox="0 0 32 32" xml:space="preserve">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                        <g id="SVGRepo_iconCarrier">
-                                            <g>
-                                                <path
-                                                    d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2C28.4,24.6,27.6,25,26.8,25z">
-                                                </path>
-                                            </g>
-                                            <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                            <canvas id="pirChart" width="700" height="500" class="mx-auto flex items-center justify-center"></canvas>
-                        </div>
-
-                        <!-- ====== Map One End -->
-
-                        <!-- ====== Table One Start -->
-                        <!-- <div class="col-span-12 xl:col-span-8">
-                            <div
-                                class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
-                                <h4 class="mb-6 text-xl font-bold text-black dark:text-white">
-                                    Top Channels
-                                </h4>
-
-                                <div class="flex flex-col">
-                                    <div class="grid grid-cols-3 rounded-sm bg-gray-2 dark:bg-meta-4 sm:grid-cols-5">
-                                        <div class="p-2.5 xl:p-5">
-                                            <h5 class="text-sm font-medium uppercase xsm:text-base">Source</h5>
-                                        </div>
-                                        <div class="p-2.5 text-center xl:p-5">
-                                            <h5 class="text-sm font-medium uppercase xsm:text-base">Visitors</h5>
-                                        </div>
-                                        <div class="p-2.5 text-center xl:p-5">
-                                            <h5 class="text-sm font-medium uppercase xsm:text-base">Revenues</h5>
-                                        </div>
-                                        <div class="hidden p-2.5 text-center sm:block xl:p-5">
-                                            <h5 class="text-sm font-medium uppercase xsm:text-base">Sales</h5>
-                                        </div>
-                                        <div class="hidden p-2.5 text-center sm:block xl:p-5">
-                                            <h5 class="text-sm font-medium uppercase xsm:text-base">Conversion</h5>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="grid grid-cols-3 border-b border-stroke dark:border-strokedark sm:grid-cols-5">
-                                        <div class="flex items-center gap-3 p-2.5 xl:p-5">
-                                            <div class="flex-shrink-0">
-                                                <img src="src/images/brand/brand-01.svg" alt="Brand" />
-                                            </div>
-                                            <p class="hidden font-medium text-black dark:text-white sm:block">
-                                                Google
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">3.5K</p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-meta-3">$5,768</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">590</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-meta-5">4.8%</p>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="grid grid-cols-3 border-b border-stroke dark:border-strokedark sm:grid-cols-5">
-                                        <div class="flex items-center gap-3 p-2.5 xl:p-5">
-                                            <div class="flex-shrink-0">
-                                                <img src="src/images/brand/brand-02.svg" alt="Brand" />
-                                            </div>
-                                            <p class="hidden font-medium text-black dark:text-white sm:block">
-                                                Twitter
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">2.2K</p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-meta-3">$4,635</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">467</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-meta-5">4.3%</p>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="grid grid-cols-3 border-b border-stroke dark:border-strokedark sm:grid-cols-5">
-                                        <div class="flex items-center gap-3 p-2.5 xl:p-5">
-                                            <div class="flex-shrink-0">
-                                                <img src="src/images/brand/brand-03.svg" alt="Brand" />
-                                            </div>
-                                            <p class="hidden font-medium text-black dark:text-white sm:block">
-                                                Github
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">2.1K</p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-meta-3">$4,290</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">420</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-meta-5">3.7%</p>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        class="grid grid-cols-3 border-b border-stroke dark:border-strokedark sm:grid-cols-5">
-                                        <div class="flex items-center gap-3 p-2.5 xl:p-5">
-                                            <div class="flex-shrink-0">
-                                                <img src="src/images/brand/brand-04.svg" alt="Brand" />
-                                            </div>
-                                            <p class="hidden font-medium text-black dark:text-white sm:block">
-                                                Vimeo
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">1.5K</p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-meta-3">$3,580</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">389</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-meta-5">2.5%</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-3 sm:grid-cols-5">
-                                        <div class="flex items-center gap-3 p-2.5 xl:p-5">
-                                            <div class="flex-shrink-0">
-                                                <img src="src/images/brand/brand-05.svg" alt="Brand" />
-                                            </div>
-                                            <p class="hidden font-medium text-black dark:text-white sm:block">
-                                                Facebook
-                                            </p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">1.2K</p>
-                                        </div>
-
-                                        <div class="flex items-center justify-center p-2.5 xl:p-5">
-                                            <p class="font-medium text-meta-3">$2,740</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-black dark:text-white">230</p>
-                                        </div>
-
-                                        <div class="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-                                            <p class="font-medium text-meta-5">1.9%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> -->
-                        <!-- ====== Table One End -->
-
-                        <!-- ====== Chat Card Start -->
-                        <!-- <div
-                            class="col-span-12 rounded-sm border border-stroke bg-white py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
-                            <h4 class="mb-6 px-7.5 text-xl font-bold text-black dark:text-white">
-                                Chats
-                            </h4>
-
-                            <div>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-03.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium text-black dark:text-white">
-                                                Devid Heilo
-                                            </h5>
-                                            <p>
-                                                <span class="text-sm font-medium text-black dark:text-white">Hello, how
-                                                    are you?</span>
-                                                <span class="text-xs"> . 12 min</span>
-                                            </p>
-                                        </div>
-                                        <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-                                            <span class="text-sm font-medium text-white">3</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-04.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium">Henry Fisher</h5>
-                                            <p>
-                                                <span class="text-sm font-medium">I am waiting for you</span>
-                                                <span class="text-xs"> . 5:54 PM</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-05.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-6"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium">Wilium Smith</h5>
-                                            <p>
-                                                <span class="text-sm font-medium">Where are you now?</span>
-                                                <span class="text-xs"> . 10:12 PM</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-01.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-3"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium text-black dark:text-white">
-                                                Henry Deco
-                                            </h5>
-                                            <p>
-                                                <span class="text-sm font-medium text-black dark:text-white">Thank you
-                                                    so much!</span>
-                                                <span class="text-xs"> . Sun</span>
-                                            </p>
-                                        </div>
-                                        <div class="flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-                                            <span class="text-sm font-medium text-white">2</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-02.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-7"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium">Jubin Jack</h5>
-                                            <p>
-                                                <span class="text-sm font-medium">I really love that!</span>
-                                                <span class="text-xs"> . Oct 23</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="messages.html"
-                                    class="flex items-center gap-5 px-7.5 py-3 hover:bg-gray-3 dark:hover:bg-meta-4">
-                                    <div class="relative h-14 w-14 rounded-full">
-                                        <img src="src/images/user/user-05.png" alt="User" />
-                                        <span
-                                            class="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-meta-6"></span>
-                                    </div>
-
-                                    <div class="flex flex-1 items-center justify-between">
-                                        <div>
-                                            <h5 class="font-medium">Wilium Smith</h5>
-                                            <p>
-                                                <span class="text-sm font-medium">Where are you now?</span>
-                                                <span class="text-xs"> . Sep 20</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> -->
-                        <!-- ====== Chat Card End -->
-                    </div>
                 </div>
             </main>
             <!-- ===== Main Content End ===== -->
@@ -1357,16 +846,10 @@
 
 
     <!-- Scripts for JS -->
-    <script src="script/gas_vib_table.js"></script>
-    <script src="script/act4_chart.js"></script>
-    <script src="script/dht22_chart.js"></script>
-    <script src="script/temperature.js"></script>
-    <script src="script/distance.js"></script>
-    <script src="script/distance1.js"></script>
-    <script src="script/distance_chart.js"></script>
-    <script src="script/pirmotion_chart.js"></script>
-    <script src="script/buzzerpir.js"></script>
-    <script src="script/buzzeract4.js"></script>
+    <script src="script/act5_chart.js"></script>
+    <script src="script/buzzeract5.js"></script>
+    <script src="script/update_icon.js"></script>
+
 </body>
 
 </html>
