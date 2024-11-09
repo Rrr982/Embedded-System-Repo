@@ -848,7 +848,7 @@
                                     </h4>
                                     <span class="text-sm font-medium">Humidity</span>
                                 </div>
-                        
+
                             </div>
                         </div>
                         <!-- Card Item End -->
@@ -869,22 +869,38 @@
                                 </svg>
                             </div>
 
-                            <div class="mt-4 flex items-end justify-between">
+                            <div class="mt-4 items-end justify-between">
                                 <div>
-                                    <h4 class="text-title-md font-bold text-black dark:text-white">
-                                        2.450
+                                    <h4 id="distance" class="text-title-md font-bold text-black dark:text-white">
+                                        Loading ...
                                     </h4>
-                                    <span class="text-sm font-medium">Total Product</span>
+                                    <span class="text-sm font-medium">Distance Sensor 1</span>
                                 </div>
 
-                                <span class="flex items-center gap-1 text-sm font-medium text-meta-3">
-                                    2.59%
-                                    <svg class="fill-meta-3" width="10" height="11" viewBox="0 0 10 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.35716 2.47737L0.908974 5.82987L5.0443e-07 4.94612L5 0.0848689L10 4.94612L9.09103 5.82987L5.64284 2.47737L5.64284 10.0849L4.35716 10.0849L4.35716 2.47737Z"
-                                            fill="" />
-                                    </svg>
+                                <span class="items-center gap-20 text-sm font-medium text-meta-3 flex">
+                                    <select id="distance-unit-select" class="p-2 border rounded-md">
+                                        <option value="cm">Centimeters (cm)</option>
+                                        <option value="mm">Millimeters (mm)</option>
+                                        <option value="m">Meters (m)</option>
+                                        <option value="km">Kilometers (km)</option>
+                                    </select>
+
+                                    <span id="distancebuzzer">
+                                        <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 32 32" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path
+                                                        d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3 C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2 C28.4,24.6,27.6,25,26.8,25z">
+                                                    </path>
+                                                </g>
+                                                <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
                                 </span>
                             </div>
                         </div>
@@ -909,42 +925,76 @@
                                 </svg>
                             </div>
 
-                            <div class="mt-4 flex items-end justify-between">
+                            <div class="mt-4 items-end justify-between">
                                 <div>
-                                    <h4 class="text-title-md font-bold text-black dark:text-white">
-                                        3.456
+                                    <h4 id="distance1" class="text-title-md font-bold text-black dark:text-white">
+                                        Loading ...
                                     </h4>
-                                    <span class="text-sm font-medium">Total Users</span>
+                                    <span class="text-sm font-medium">Distance Sensor 2</span>
                                 </div>
 
-                                <span class="flex items-center gap-1 text-sm font-medium text-meta-5">
-                                    0.95%
-                                    <svg class="fill-meta-5" width="10" height="11" viewBox="0 0 10 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.64284 7.69237L9.09102 4.33987L10 5.22362L5 10.0849L-8.98488e-07 5.22362L0.908973 4.33987L4.35716 7.69237L4.35716 0.0848701L5.64284 0.0848704L5.64284 7.69237Z"
-                                            fill="" />
-                                    </svg>
+                                <span class="items-center gap-20 text-sm font-medium text-meta-3 flex">
+                                    <select id="distance-unit-select1" class="p-2 border rounded-md">
+                                        <option value="cm">Centimeters (cm)</option>
+                                        <option value="mm">Millimeters (mm)</option>
+                                        <option value="m">Meters (m)</option>
+                                        <option value="km">Kilometers (km)</option>
+                                    </select>
+
+                                    <span id="distancebuzzer1">
+                                        <svg fill="#f8e45c" height="40px" width="40px" version="1.1" id="Icons"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 32 32" xml:space="preserve">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <path
+                                                        d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3 C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2 C28.4,24.6,27.6,25,26.8,25z">
+                                                    </path>
+                                                </g>
+                                                <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
                                 </span>
                             </div>
                         </div>
                         <!-- Card Item End -->
                     </div>
+                    <br>
+                    <!-- Place CARD for Chart here Distance Chart  ... -->
+                    <div class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                        <h2 class="text-title-md font-bold text-black dark:text-white text-center">Temperaure and Humidity</h2>
+                        <br>
+                        <canvas id="myChart" width="1000" height="500" class="mx-auto flex items-center justify-center"></canvas>
+                    </div>
+
+                    <br>
+
+                    <div class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
+                        <h2 class="text-title-md font-bold text-black dark:text-white text-center">Distance Chart</h2>
+
+                        <br>
+                        <canvas id="combinedChart" width="1000" height="500" class="mx-auto flex items-center justify-center"></canvas>
+
+                    </div>
+                    <!-- end chart -->
 
                     <div class="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
                         <!-- ====== Chart One Start -->
                         <div
                             class="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-8">
                             <div class="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap">
-                                <div class="flex w-full flex-wrap gap-3 sm:gap-5">
+                                <div class="flex w-full flex-wrap gap-3 sm:gap-5 items-center justify-center">
                                     <div class="flex min-w-47.5">
                                         <span
                                             class="mr-2 mt-1 flex h-4 w-full max-w-4 items-center justify-center rounded-full border border-primary">
-                                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-primary"></span>
+                                            <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-red-500"></span>
                                         </span>
                                         <div class="w-full">
-                                            <p class="font-semibold text-primary">Total Revenue</p>
-                                            <p class="text-sm font-medium">12.04.2022 - 12.05.2022</p>
+                                            <p class="font-semibold text-red-500">Total Gas</p>
+
                                         </div>
                                     </div>
                                     <div class="flex min-w-47.5">
@@ -953,30 +1003,14 @@
                                             <span class="block h-2.5 w-full max-w-2.5 rounded-full bg-secondary"></span>
                                         </span>
                                         <div class="w-full">
-                                            <p class="font-semibold text-secondary">Total Sales</p>
-                                            <p class="text-sm font-medium">12.04.2022 - 12.05.2022</p>
+                                            <p class="font-semibold text-secondary">Total Vibration</p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="flex w-full max-w-45 justify-end">
-                                    <div class="inline-flex items-center rounded-md bg-whiter p-1.5 dark:bg-meta-4">
-                                        <button
-                                            class="rounded bg-white px-3 py-1 text-xs font-medium text-black shadow-card hover:bg-white hover:shadow-card dark:bg-boxdark dark:text-white dark:hover:bg-boxdark">
-                                            Day
-                                        </button>
-                                        <button
-                                            class="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark">
-                                            Week
-                                        </button>
-                                        <button
-                                            class="rounded px-3 py-1 text-xs font-medium text-black hover:bg-white hover:shadow-card dark:text-white dark:hover:bg-boxdark">
-                                            Month
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <div id="chartOne" class="-ml-5"></div>
+                                <canvas id="act4Chart" width="900" height="500" class="mx-auto flex items-center justify-center"></canvas>
+
                             </div>
                         </div>
 
@@ -985,32 +1019,24 @@
                         <!-- ====== Chart Two Start -->
                         <div
                             class="col-span-12 rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
-                            <div class="mb-4 justify-between gap-4 sm:flex">
+                            <div class="mb-4 justify-between gap-4">
                                 <div>
                                     <h4 class="text-xl font-bold text-black dark:text-white">
-                                        Profit this week
+                                        Historical Data of Gas and Vibration
                                     </h4>
                                 </div>
-                                <div>
-                                    <div class="relative z-20 inline-block">
-                                        <select name="#" id="#"
-                                            class="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none">
-                                            <option value="">This Week</option>
-                                            <option value="">Last Week</option>
-                                        </select>
-                                        <span class="absolute right-3 top-1/2 z-10 -translate-y-1/2">
-                                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0.47072 1.08816C0.47072 1.02932 0.500141 0.955772 0.54427 0.911642C0.647241 0.808672 0.809051 0.808672 0.912022 0.896932L4.85431 4.60386C4.92785 4.67741 5.06025 4.67741 5.14851 4.60386L9.09079 0.896932C9.19376 0.793962 9.35557 0.808672 9.45854 0.911642C9.56151 1.01461 9.5468 1.17642 9.44383 1.27939L5.50155 4.98632C5.22206 5.23639 4.78076 5.23639 4.51598 4.98632L0.558981 1.27939C0.50014 1.22055 0.47072 1.16171 0.47072 1.08816Z"
-                                                    fill="#637381" />
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M1.22659 0.546578L5.00141 4.09604L8.76422 0.557869C9.08459 0.244537 9.54201 0.329403 9.79139 0.578788C10.112 0.899434 10.0277 1.36122 9.77668 1.61224L9.76644 1.62248L5.81552 5.33722C5.36257 5.74249 4.6445 5.7544 4.19352 5.32924C4.19327 5.32901 4.19377 5.32948 4.19352 5.32924L0.225953 1.61241C0.102762 1.48922 -4.20186e-08 1.31674 -3.20269e-08 1.08816C-2.40601e-08 0.905899 0.0780105 0.712197 0.211421 0.578787C0.494701 0.295506 0.935574 0.297138 1.21836 0.539529L1.22659 0.546578ZM4.51598 4.98632C4.78076 5.23639 5.22206 5.23639 5.50155 4.98632L9.44383 1.27939C9.5468 1.17642 9.56151 1.01461 9.45854 0.911642C9.35557 0.808672 9.19376 0.793962 9.09079 0.896932L5.14851 4.60386C5.06025 4.67741 4.92785 4.67741 4.85431 4.60386L0.912022 0.896932C0.809051 0.808672 0.647241 0.808672 0.54427 0.911642C0.500141 0.955772 0.47072 1.02932 0.47072 1.08816C0.47072 1.16171 0.50014 1.22055 0.558981 1.27939L4.51598 4.98632Z"
-                                                    fill="#637381" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
+                                <table class="mt-4 w-full">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border border-gray-300 p-2">Entry</th>
+                                            <th class="border border-gray-300 p-2">Gas</th>
+                                            <th class="border border-gray-300 p-2">Vibration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="sensorDataBody">
+                                        <!-- Data rows will be populated here -->
+                                    </tbody>
+                                </table>
                             </div>
 
                             <div>
@@ -1031,70 +1057,15 @@
                                 </div>
                                 <div>
                                     <div class="relative z-20 inline-block">
-                                        <select name="" id=""
-                                            class="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none">
-                                            <option value="">Monthly</option>
-                                            <option value="">Yearly</option>
-                                        </select>
-                                        <span class="absolute right-3 top-1/2 z-10 -translate-y-1/2">
-                                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0.47072 1.08816C0.47072 1.02932 0.500141 0.955772 0.54427 0.911642C0.647241 0.808672 0.809051 0.808672 0.912022 0.896932L4.85431 4.60386C4.92785 4.67741 5.06025 4.67741 5.14851 4.60386L9.09079 0.896932C9.19376 0.793962 9.35557 0.808672 9.45854 0.911642C9.56151 1.01461 9.5468 1.17642 9.44383 1.27939L5.50155 4.98632C5.22206 5.23639 4.78076 5.23639 4.51598 4.98632L0.558981 1.27939C0.50014 1.22055 0.47072 1.16171 0.47072 1.08816Z"
-                                                    fill="#637381" />
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M1.22659 0.546578L5.00141 4.09604L8.76422 0.557869C9.08459 0.244537 9.54201 0.329403 9.79139 0.578788C10.112 0.899434 10.0277 1.36122 9.77668 1.61224L9.76644 1.62248L5.81552 5.33722C5.36257 5.74249 4.6445 5.7544 4.19352 5.32924C4.19327 5.32901 4.19377 5.32948 4.19352 5.32924L0.225953 1.61241C0.102762 1.48922 -4.20186e-08 1.31674 -3.20269e-08 1.08816C-2.40601e-08 0.905899 0.0780105 0.712197 0.211421 0.578787C0.494701 0.295506 0.935574 0.297138 1.21836 0.539529L1.22659 0.546578ZM4.51598 4.98632C4.78076 5.23639 5.22206 5.23639 5.50155 4.98632L9.44383 1.27939C9.5468 1.17642 9.56151 1.01461 9.45854 0.911642C9.35557 0.808672 9.19376 0.793962 9.09079 0.896932L5.14851 4.60386C5.06025 4.67741 4.92785 4.67741 4.85431 4.60386L0.912022 0.896932C0.809051 0.808672 0.647241 0.808672 0.54427 0.911642C0.500141 0.955772 0.47072 1.02932 0.47072 1.08816C0.47072 1.16171 0.50014 1.22055 0.558981 1.27939L4.51598 4.98632Z"
-                                                    fill="#637381" />
-                                            </svg>
-                                        </span>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-2">
-                                <div id="chartThree" class="mx-auto flex justify-center"></div>
+                                <img src="/python/image/motion_capture.jpg" alt="Motion Capture" style="max-width: 100%; height: auto; margin-top: 10px; padding-bottom: 40px;" onerror="this.onerror=null; this.src='/path/to/default/image.jpg';">
+                                <h4 class="text-xl font-bold text-black dark:text-white">Live Camera Feed</h3>
+                                    <img src="http://192.168.0.105:8080/?action=stream" alt="Live Stream" style="max-width: 100%; height: auto; margin-top: 10px; padding-bottom: 40px;" onerror="this.onerror=null; this.src='assets/liveplaceholder.png';">
                             </div>
-                            <div class="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
-                                <div class="w-full px-8 sm:w-1/2">
-                                    <div class="flex w-full items-center">
-                                        <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-primary"></span>
-                                        <p
-                                            class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-                                            <span> Desktop </span>
-                                            <span> 65% </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="w-full px-8 sm:w-1/2">
-                                    <div class="flex w-full items-center">
-                                        <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#6577F3]"></span>
-                                        <p
-                                            class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-                                            <span> Tablet </span>
-                                            <span> 34% </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="w-full px-8 sm:w-1/2">
-                                    <div class="flex w-full items-center">
-                                        <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#8FD0EF]"></span>
-                                        <p
-                                            class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-                                            <span> Mobile </span>
-                                            <span> 45% </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="w-full px-8 sm:w-1/2">
-                                    <div class="flex w-full items-center">
-                                        <span class="mr-2 block h-3 w-full max-w-3 rounded-full bg-[#0FADCF]"></span>
-                                        <p
-                                            class="flex w-full justify-between text-sm font-medium text-black dark:text-white">
-                                            <span> Unknown </span>
-                                            <span> 12% </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
 
                         <!-- ====== Chart Three End -->
@@ -1102,16 +1073,35 @@
                         <!-- ====== Map One Start -->
                         <div
                             class="col-span-12 rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-7">
-                            <h4 class="mb-2 text-xl font-bold text-black dark:text-white">
-                                Region labels
-                            </h4>
-                            <div id="mapOne" class="mapOne map-btn h-90"></div>
+
+                            <div class="flex justify-center items-center gap-10">
+                                <h4 class="mb-2 text-xl font-bold text-black dark:text-white">
+                                    PIR Motion Sensor Chart
+                                </h4>
+                                <span id="pirbuzzer">
+                                    <svg fill="#f8e45c" height="50px" width="50px" version="1.1" id="Icons"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 32 32" xml:space="preserve">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <path
+                                                    d="M26.8,25H5.2c-0.8,0-1.5-0.4-1.9-1.1c-0.4-0.7-0.3-1.5,0.1-2.2L4.5,20c1.8-2.7,2.7-5.8,2.7-9c0-3.7,2.4-7.1,5.9-8.3C13.7,1.6,14.8,1,16,1s2.3,0.6,2.9,1.7c3.5,1.2,5.9,4.6,5.9,8.3c0,3.2,0.9,6.3,2.7,9l1.1,1.7c0.4,0.7,0.5,1.5,0.1,2.2C28.4,24.6,27.6,25,26.8,25z">
+                                                </path>
+                                            </g>
+                                            <path d="M11.1,27c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H11.1z"></path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <canvas id="pirChart" width="700" height="500" class="mx-auto flex items-center justify-center"></canvas>
                         </div>
 
                         <!-- ====== Map One End -->
 
                         <!-- ====== Table One Start -->
-                        <div class="col-span-12 xl:col-span-8">
+                        <!-- <div class="col-span-12 xl:col-span-8">
                             <div
                                 class="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
                                 <h4 class="mb-6 text-xl font-bold text-black dark:text-white">
@@ -1278,11 +1268,11 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
                         <!-- ====== Table One End -->
 
                         <!-- ====== Chat Card Start -->
-                        <div
+                        <!-- <div
                             class="col-span-12 rounded-sm border border-stroke bg-white py-6 shadow-default dark:border-strokedark dark:bg-boxdark xl:col-span-4">
                             <h4 class="mb-6 px-7.5 text-xl font-bold text-black dark:text-white">
                                 Chats
@@ -1410,7 +1400,7 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- ====== Chat Card End -->
                     </div>
                 </div>
@@ -1427,6 +1417,7 @@
     <script src="script/act4_chart.js"></script>
     <script src="script/dht22_chart.js"></script>
     <script src="script/temperature.js"></script>
+    <script src="script/distance.js"></script>
     <script src="script/distance1.js"></script>
     <script src="script/distance_chart.js"></script>
     <script src="script/pirmotion_chart.js"></script>
